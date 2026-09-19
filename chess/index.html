@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jev Chess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">♞</span><span>Jev Chess</span></div>
+      <div class="bot-pill"><span class="pulse"></span> BOT ONLINE</div>
+    </header>
+    <section class="game-layout">
+      <div class="board-column">
+        <div class="player-card human-card"><span class="avatar">♙</span><div><strong>You</strong><small>White</small></div><span id="human-clock">10:00</span></div>
+        <div id="board" class="board" aria-label="Chess board"></div>
+        <div class="player-card bot-card"><span class="avatar bot-avatar">♟</span><div><strong>Jev Bot</strong><small>Black · Choice model</small></div><span id="bot-clock">10:00</span></div>
+      </div>
+      <aside class="side-panel">
+        <div class="status-block"><span class="eyebrow">GAME STATUS</span><h1 id="status">Your move</h1><p id="hint">Select a piece to see legal moves.</p></div>
+        <div class="moves-block"><div class="moves-heading"><span>MOVE HISTORY</span><span id="move-count">0 moves</span></div><div id="moves" class="moves-list"></div></div>
+        <button id="new-game" class="new-game">New game</button>
+        <p class="model-note">Jev chooses from legal moves using a typed <strong>choice</strong> decision.</p>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
